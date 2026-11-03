@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PromptBox — AI Prompts & Learning</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="nav"><a class="brand" href="#home"><span class="brandmark">P</span> Prompt Box</a>
+<button class="hamb" id="hamb">☰</button><nav id="navlinks"><a href="#home">Home</a><a href="#prompts">AI Prompts</a><a href="#courses">Courses</a><a href="#about">About</a></nav>
+<button class="loginBtn" id="loginOpen">Login</button></header>
+<main>
+<section class="hero" id="home"><div class="heroCopy"><small>YOUR AI TOOLKIT STARTS HERE</small><h1>Work smarter with<br><em>powerful AI prompts.</em></h1><p>Discover ready-to-use prompts, learn practical AI skills and make more out of every idea.</p><div class="heroActions"><a class="primary" href="#prompts">Explore Prompts →</a><a class="textLink" href="#courses">Browse Courses</a></div><div class="ticks">✦ Easy to use　 ✦ Beginner friendly　 ✦ Learn at your pace</div></div>
+<div class="daily"><div class="spark">✦ PROMPT OF THE DAY</div><h3>Turn your idea into a clear action plan.</h3><p id="dailyText">Act as an expert strategist. Help me turn the following idea into a practical step-by-step plan...</p><div class="dailyFoot"><span>Writing · Productivity</span><button class="copyDaily">Copy prompt ↗</button></div></div></section>
+<section class="intro"><div><small>✦ AI PROMPTS</small><h2>LEARN · CREATE · GROW</h2></div><div class="three"><article><b>Explore</b><span>Useful prompt ideas</span></article><article><b>Learn</b><span>Practical AI skills</span></article><article><b>Create</b><span>Turn ideas into results</span></article></div></section>
+<section class="library" id="prompts"><div class="sectionHead"><div><small>PROMPT LIBRARY</small><h2>Find the right prompt.</h2><p>Browse sample prompts by category.</p></div><button id="loginAdd" class="outline">＋ Add your prompt</button></div>
+<div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Writing">Writing</button><button class="filter" data-filter="Business">Business</button><button class="filter" data-filter="Study">Study</button><button class="filter" data-filter="Productivity">Productivity</button></div>
+<div id="promptGrid" class="grid">
+<article class="promptCard" data-category="Writing"><div class="emoji">✍</div><small>WRITING</small><h3>Professional Email Writer</h3><p>Write clear, polite and professional emails for work.</p><button class="sampleCopy" data-prompt="Write a clear, polite and professional email about: [topic]. Use a suitable subject line and concise paragraphs.">Copy sample prompt ↗</button></article>
+<article class="promptCard" data-category="Business"><div class="emoji">↗</div><small>BUSINESS</small><h3>Business Idea Planner</h3><p>Evaluate an idea and turn it into practical next steps.</p><button class="sampleCopy" data-prompt="Act as a business strategist. Evaluate this idea: [idea]. Identify customers, value, costs, risks and practical next steps.">Copy sample prompt ↗</button></article>
+<article class="promptCard" data-category="Study"><div class="emoji">✦</div><small>STUDY</small><h3>Study Topic Explainer</h3><p>Understand a difficult topic with simple examples.</p><button class="sampleCopy" data-prompt="Explain [topic] in simple language with examples, key terms and a short quiz.">Copy sample prompt ↗</button></article>
+<article class="promptCard" data-category="Productivity"><div class="emoji">▦</div><small>PRODUCTIVITY</small><h3>Daily Task Organizer</h3><p>Prioritize tasks and create a realistic daily schedule.</p><button class="sampleCopy" data-prompt="Help me organize these tasks: [tasks]. Prioritize them and create a realistic schedule with breaks.">Copy sample prompt ↗</button></article>
+</div><div id="userPrompts" class="grid"></div><p id="promptNotice" class="notice"></p></section>
+<section class="courses" id="courses"><small>LEARN SOMETHING NEW</small><h2>Featured learning paths.</h2><p>Course cards are sample content; add your own lessons later.</p><div class="grid"><article class="course"><small>AI 101 · BEGINNER</small><h3>AI Tools for Beginners</h3><p>Learn the basics of using AI tools in everyday work.</p><a href="#about">View course details →</a></article><article class="course"><small>PROMPT CRAFT · PRACTICAL</small><h3>Prompt Writing Essentials</h3><p>Build clearer prompts and get more useful responses.</p><a href="#about">View course details →</a></article><article class="course"><small>CREATE MORE · CREATIVE</small><h3>AI for Content Creation</h3><p>Explore workflows for ideas, outlines and content drafts.</p><a href="#about">View course details →</a></article></div></section>
+<section class="cta" id="about"><small>START YOUR JOURNEY</small><h2>Your next great idea<br>starts with a prompt.</h2><p>PromptBox helps you organize prompts and make more out of every idea.</p><a class="primary" href="#prompts">Get started ↑</a></section>
+</main><footer>© PromptBox. Made for ideas that move forward.</footer>
+<div class="modal" id="authModal"><div class="modalBox"><button class="close" id="closeModal">×</button><h2 id="modalTitle">Welcome back</h2><p>Log in or create an account to save your prompts.</p><input id="email" type="email" placeholder="Email address"><input id="password" type="password" placeholder="Password"><div class="modalActions"><button id="doLogin" class="primary">Login</button><button id="doSignup" class="outline">Create account</button></div><p id="authMsg" class="notice"></p></div></div>
+<div class="toast" id="toast"></div>
+</body></html>
